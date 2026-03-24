@@ -9,5 +9,12 @@ public class Java8LambdaRunnable {
                 System.out.println("Olá mundo!");
             }
         }).run();
+
+
+        
+
+        new Thread(() -> System.out.println("Olá mundo!")).run();
+
+
     }
 }
