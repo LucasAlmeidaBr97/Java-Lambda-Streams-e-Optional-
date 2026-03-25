@@ -15,5 +15,13 @@ public class Java8LambdaStream {
         for(Integer integer : asList){
             System.out.println(integer);
         }
+
+
+        //Java 8 +
+
+        asList.stream()
+        .filter(e -> e % 2 == 0)
+        .forEach(e -> System.out.println(e));
     }
+
 }
