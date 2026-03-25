@@ -19,5 +19,10 @@ public class Java8LambdaActionListener {
 
         JButton jButton2 = new JButton();
         jButton2.addActionListener(e -> System.out.println("Olá mundo!"));
+
+        //SAM - Single Abstract Method
+        // Qualquer interface que tenha apenas um método abstrato
+        
+
     }
 }
