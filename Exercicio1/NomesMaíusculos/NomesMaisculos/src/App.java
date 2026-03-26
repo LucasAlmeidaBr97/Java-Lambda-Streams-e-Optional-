@@ -7,21 +7,25 @@ public class App {
         List<String> listNames = Arrays.asList("lucas", "cassio", "joao");
 
         listNames.stream()
-            .map(s -> toUpper(s))
-            .forEach(System.out::println);;
+                .map(s -> toUpper(s))
+                .forEach(System.out::println);
+        ;
 
-            System.out.println(" Segundo método ");
+        System.out.println(" Segundo método ");
 
-            listNames.stream()
-            .map(name -> name.substring(0,1).toUpperCase() + name.substring(1))
-            .forEach(System.out::println);
+        listNames.stream()
+                .map(name -> name.substring(0, 1).toUpperCase() + name.substring(1))
+                .forEach(System.out::println);
 
-            
+        System.out.println(" Terceiro método");
+
+        listNames.replaceAll(name -> name.substring(0, 1).toUpperCase() + name.substring(1));
+
     }
 
-    public static String toUpper(String name){
+    public static String toUpper(String name) {
         StringBuilder sb = new StringBuilder();
-        for(int i = 0; i < name.length(); i++){
+        for (int i = 0; i < name.length(); i++) {
             char c = name.charAt(i);
             if (Character.isLowerCase(c) && i == 0) {
                 sb.append(Character.toUpperCase(c));
