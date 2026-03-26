@@ -13,14 +13,19 @@ public class App {
 
         System.out.println(" Segundo método ");
 
-        listNames.stream()
+        List<String> listNames1 = Arrays.asList("lucas", "cassio", "joao");
+
+        listNames1.stream()
                 .map(name -> name.substring(0, 1).toUpperCase() + name.substring(1))
                 .forEach(System.out::println);
 
         System.out.println(" Terceiro método");
 
-        listNames.replaceAll(name -> name.substring(0, 1).toUpperCase() + name.substring(1));
+        List<String> listNames2 = Arrays.asList("lucas", "cassio", "joao");
 
+        listNames2.replaceAll(name -> name.substring(0, 1).toUpperCase() + name.substring(1));
+
+        listNames2.forEach(System.out::println);
     }
 
     public static String toUpper(String name) {
